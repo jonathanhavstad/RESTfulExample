@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RESTfulExample</string>
+    <string name="host_url">https://jsonplaceholder.typicode.com/</string>
+    <string name="rest_operation">posts</string>
+    <string name="current_item_save_state_key">current_item</string>
+    <string name="list_view_fragment_tag">list_tag</string>
+    <string name="content_view_fragment_tag">content_tag</string>
+</resources>
