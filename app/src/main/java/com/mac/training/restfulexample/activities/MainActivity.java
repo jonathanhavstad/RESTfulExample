@@ -1,4 +1,4 @@
-package com.mac.training.fragment1.activities;
+package com.mac.training.restfulexample.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.mac.training.fragment1.R;
-import com.mac.training.fragment1.content.PlaceholderContent;
+import com.mac.training.restfulexample.R;
+import com.mac.training.restfulexample.content.PlaceholderContent;
 
 public class MainActivity extends AppCompatActivity implements
        ItemFragment.OnListFragmentInteractionListener, DetailFragment.OnFragmentInteractionListener {

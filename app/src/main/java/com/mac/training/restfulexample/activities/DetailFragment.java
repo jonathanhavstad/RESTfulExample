@@ -1,4 +1,4 @@
-package com.mac.training.fragment1.activities;
+package com.mac.training.restfulexample.activities;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mac.training.fragment1.R;
-import com.mac.training.fragment1.content.PlaceholderContent;
+import com.mac.training.restfulexample.R;
+import com.mac.training.restfulexample.content.PlaceholderContent;
 
 public class DetailFragment extends Fragment {
     private static final String FRAGMENT_ARG1_KEY = "placeholderitem";

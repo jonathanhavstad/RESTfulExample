@@ -1,4 +1,4 @@
-package com.mac.training.fragment1.content;
+package com.mac.training.restfulexample.content;
 
 import android.os.Parcel;
 import android.os.Parcelable;

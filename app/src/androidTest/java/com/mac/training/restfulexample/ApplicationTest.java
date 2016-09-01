@@ -1,4 +1,4 @@
-package com.mac.training.fragment1;
+package com.mac.training.restfulexample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

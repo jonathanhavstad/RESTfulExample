@@ -1,4 +1,4 @@
-package com.mac.training.fragment1.activities;
+package com.mac.training.restfulexample.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -25,9 +25,9 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonArrayRequest;
 
-import com.mac.training.fragment1.adapters.ItemContentRecyclerViewAdapter;
-import com.mac.training.fragment1.R;
-import com.mac.training.fragment1.content.PlaceholderContent;
+import com.mac.training.restfulexample.adapters.ItemContentRecyclerViewAdapter;
+import com.mac.training.restfulexample.R;
+import com.mac.training.restfulexample.content.PlaceholderContent;
 
 import org.json.JSONArray;
 import org.json.JSONException;

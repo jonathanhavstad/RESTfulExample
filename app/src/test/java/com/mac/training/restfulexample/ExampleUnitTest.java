@@ -1,4 +1,4 @@
-package com.mac.training.fragment1;
+package com.mac.training.restfulexample;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.mac.training.fragment1.adapters;
+package com.mac.training.restfulexample.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mac.training.fragment1.R;
-import com.mac.training.fragment1.activities.ItemFragment.OnListFragmentInteractionListener;
-import com.mac.training.fragment1.content.PlaceholderContent.PlaceholderItem;
+import com.mac.training.restfulexample.R;
+import com.mac.training.restfulexample.activities.ItemFragment.OnListFragmentInteractionListener;
+import com.mac.training.restfulexample.content.PlaceholderContent.PlaceholderItem;
 
 import java.util.List;
 

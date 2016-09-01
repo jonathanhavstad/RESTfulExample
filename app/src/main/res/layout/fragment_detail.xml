@@ -8,7 +8,7 @@
     <FrameLayout
         android:id="@+id/detail_card_view"
         android:layout_width="match_parent"
-        android:layout_height="224dp">
+        android:layout_height="@dimen/detail_mid_section_margin_top">
 
         <ImageView
             android:layout_width="match_parent"
@@ -35,8 +35,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="224dp"
+        android:layout_height="@dimen/detail_mid_section_height"
+        android:layout_marginTop="@dimen/detail_mid_section_margin_top"
         android:id="@+id/basic_info_view"
         android:background="@color/colorPrimary">
         <TextView
@@ -58,8 +58,8 @@
     <android.support.design.widget.FloatingActionButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginTop="198dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="@dimen/detail_fab_margin_top"
+        android:layout_marginRight="@dimen/detail_fab_margin_right"
         android:layout_gravity="end"
         android:tint="@color/white"
         app:srcCompat="@android:drawable/ic_input_add"/>
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="@dimen/detail_bottom_section_margin_top"
         android:id="@+id/detail_info_view" >
         <TextView
             android:id="@+id/item_body_display"
