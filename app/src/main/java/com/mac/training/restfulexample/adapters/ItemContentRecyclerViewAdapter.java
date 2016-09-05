@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.mac.training.restfulexample.R;
 import com.mac.training.restfulexample.activities.ItemFragment.OnListFragmentInteractionListener;
+import com.mac.training.restfulexample.content.PlaceholderContent;
 import com.mac.training.restfulexample.content.PlaceholderContent.PlaceholderItem;
 
 import java.util.List;
@@ -16,13 +17,13 @@ import java.util.List;
 public class ItemContentRecyclerViewAdapter
         extends RecyclerView.Adapter<ItemContentRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final PlaceholderContent contentValues;
+    private final OnListFragmentInteractionListener listener;
 
     public ItemContentRecyclerViewAdapter(
-            List<PlaceholderItem> items, OnListFragmentInteractionListener listener) {
-        mValues = items;
-        mListener = listener;
+            PlaceholderContent contentValues, OnListFragmentInteractionListener listener) {
+        this.contentValues = contentValues;
+        this.listener = listener;
     }
 
     @Override
@@ -34,15 +35,15 @@ public class ItemContentRecyclerViewAdapter
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).getTitle());
+        holder.item = contentValues.getItem(position);
+        holder.idView.setText(contentValues.getItem(position).title);
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (null != mListener) {
+                if (listener != null) {
                     Log.d(getClass().getName(), "mListener is non-null");
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    listener.onListFragmentInteraction(holder.item);
                 } else {
                     Log.d(getClass().getName(), "mListener is null");
                 }
@@ -52,23 +53,23 @@ public class ItemContentRecyclerViewAdapter
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return contentValues.getSize();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mIdView;
-        public PlaceholderItem mItem;
+        public final View view;
+        public final TextView idView;
+        public PlaceholderItem item;
 
         public ViewHolder(View view) {
             super(view);
-            mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
+            this.view = view;
+            this.idView = (TextView) view.findViewById(R.id.id);
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mIdView.getText() + "'";
+            return super.toString() + " '" + idView.getText() + "'";
         }
     }
 }

@@ -14,10 +14,10 @@ import java.util.Map;
 public class PlaceholderContent {
 
     public static class PlaceholderItem implements Parcelable {
-        private int id;
-        private int userId;
-        private String title;
-        private String body;
+        public int id;
+        public int userId;
+        public String title;
+        public String body;
 
         public static final Parcelable.Creator<PlaceholderItem> CREATOR =
                 new Parcelable.Creator<PlaceholderItem>() {
@@ -43,38 +43,6 @@ public class PlaceholderContent {
             this.id = id;
             this.userId = userId;
             this.title = title;
-            this.body = body;
-        }
-
-        public int getItemId() {
-            return id;
-        }
-
-        public void setItemId(int id) {
-            this.id = id;
-        }
-
-        public int getUserId() {
-            return userId;
-        }
-
-        public void setUserId(int userId) {
-            this.userId = userId;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getBody() {
-            return body;
-        }
-
-        public void setBody(String body) {
             this.body = body;
         }
 
@@ -112,8 +80,15 @@ public class PlaceholderContent {
         itemsMap.put(item.id, item);
     }
 
-    public List<PlaceholderItem> getAllItems() {
-        return items;
+    public PlaceholderItem getItem(int index) {
+        if (index >= 0 && index < items.size()) {
+            return items.get(index);
+        }
+        throw new ArrayIndexOutOfBoundsException("Index " + index + " is out of bounds!");
+    }
+
+    public int getSize() {
+        return items.size();
     }
 
     public void clearAllItems() { items.clear(); }

@@ -46,22 +46,22 @@ public class DetailFragment extends Fragment {
 
         TextView titleView = (TextView) fragmentView.findViewById(R.id.item_title_display);
         if (titleView != null) {
-            titleView.setText(item.getTitle());
+            titleView.setText(item.title);
         }
 
         TextView idView = (TextView) fragmentView.findViewById(R.id.item_id_display);
         if (idView != null) {
-            idView.setText(String.valueOf(item.getItemId()));
+            idView.setText(String.valueOf(item.id));
         }
 
         TextView userIdView = (TextView) fragmentView.findViewById(R.id.item_userid_display);
         if (userIdView != null) {
-            userIdView.setText(String.valueOf(item.getUserId()));
+            userIdView.setText(String.valueOf(item.userId));
         }
 
         TextView bodyView = (TextView) fragmentView.findViewById(R.id.item_body_display);
         if (bodyView != null) {
-            bodyView.setText(item.getBody());
+            bodyView.setText(item.body);
         }
 
         Log.d(getClass().getName(), "Setting content to: " + item.toString());

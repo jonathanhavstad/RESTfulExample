@@ -49,10 +49,7 @@ public class ItemFragment extends Fragment {
 
     public PlaceholderContent.PlaceholderItem getItem(int index) {
         if (placeholderContent != null) {
-            List<PlaceholderContent.PlaceholderItem> items = placeholderContent.getAllItems();
-            if (index >= 0 && index < items.size()) {
-                return items.get(index);
-            }
+           return placeholderContent.getItem(index);
         }
         return null;
     }
@@ -147,7 +144,7 @@ public class ItemFragment extends Fragment {
                 Log.d(getClass().getName(), "mListener is non-null");
             }
             recyclerViewAdapter = new ItemContentRecyclerViewAdapter(
-                    placeholderContent.getAllItems(),
+                    placeholderContent,
                     listFragmentInteractionListner);
             recyclerView.setAdapter(recyclerViewAdapter);
 
